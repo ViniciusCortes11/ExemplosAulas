@@ -9,6 +9,7 @@ do
     Console.WriteLine("(0) Sair");
     Console.WriteLine("(1) Somar dois números");
     Console.WriteLine("(2) Converter Metros em Milímetros");
+    Console.WriteLine("(3) Adivinhar número misterioso");
     Console.Write("Opção: ");
     opcao = Convert.ToInt32(Console.ReadLine());
     switch (opcao)
@@ -18,6 +19,9 @@ do
             break;
         case 2:
             Convertedor();
+            break;
+        case 3:
+            AdivinharNumero();
             break;
 
     }
@@ -65,3 +69,19 @@ void Convertedor()
 }
 
 
+void AdivinharNumero()
+{
+    Console.Write("Adivinhe o número misterioso ");
+    var num_mist = Console.ReadLine();
+    
+    if (int.TryParse(num_mist, out var saidaValor1))
+    {
+        SomaDoisNumeros somador = new SomaDoisNumeros();
+        Console.WriteLine("Resultado: " + somador.Somar(saidaValor1, saidaValor2));
+    }
+    else
+    {
+        Console.WriteLine($"Os valores informados devem ser números inteiros. Valor1: {valor1} / Valor2 {valor2}");
+    }
+
+}
