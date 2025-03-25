@@ -77,11 +77,11 @@ void AdivinharNumero()
     if (int.TryParse(num_mist, out var saidaValor1))
     {
         SomaDoisNumeros somador = new SomaDoisNumeros();
-        Console.WriteLine("Resultado: " + somador.Somar(saidaValor1, saidaValor2));
+      //  Console.WriteLine("Resultado: " + somador.Somar(saidaValor1, saidaValor2));
     }
     else
     {
-        Console.WriteLine($"Os valores informados devem ser números inteiros. Valor1: {valor1} / Valor2 {valor2}");
+     //   Console.WriteLine($"Os valores informados devem ser números inteiros. Valor1: {valor1} / Valor2 {valor2}");
     }
 
 }
